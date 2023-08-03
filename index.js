@@ -56,7 +56,13 @@ const inquirer = require('inquirer');
 //❌specifically I will need to import fs like in 09.13.
 const fs = require('fs');
 
-function writeToFile(fileName, data) {}
+
+//❌like in 09.13, creating a README markdown file
+fs.writeFile('README.md', process.argv[2], (err) =>
+  err ? console.error(err) : console.log('Success!')
+);
+
+// function writeToFile(fileName, data) {}
 
 //❌ TODO: Create a function to initialize app
 function init() {}
