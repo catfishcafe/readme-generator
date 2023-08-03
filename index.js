@@ -19,56 +19,31 @@ const inquirer = require('inquirer');
   // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
   // WHEN I enter my email address
   // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-//❌from 09.19:
-  // inquirer
-  //   .prompt([
-  //     {
-  //       type: 'input',
-  //       message: 'What is your user name?',
-  //       name: 'username',
-  //     },
-  //     {
-  //       type: 'password',
-  //       message: 'What is your password?',
-  //       name: 'password',
-  //     },
-  //     {
-  //       type: 'password',
-  //       message: 'Re-enter password to confirm:',
-  //       name: 'confirm',
-  //     },
-  //   ])
-  //   .then((response) =>
-  //     response.confirm === response.password
-  //       ? console.log('Success!')
-  //       : console.log('You forgot your password already?!')
-  //   );
 
 //❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email' ...not sure about that last part about the instructiosn on 'how to reach me', is that a separate prompt?
 
   inquirer
-  .prompt([
-    {
-      type: 'input',
-      message: 'What is your user name?',
-      name: 'username',
-    },
-    {
-      type: 'password',
-      message: 'What is your password?',
-      name: 'password',
-    },
-    {
-      type: 'password',
-      message: 'Re-enter password to confirm:',
-      name: 'confirm',
-    },
-  ])
-  .then((response) =>
-    response.confirm === response.password
-      ? console.log('Success!')
-      : console.log('You forgot your password already?!')
-  );
+    .prompt([
+      {
+        type: 'input',
+        message: 'Project title:',
+        name: 'title',
+      },
+      {
+        type: 'input',
+        message: 'Project description:',
+        name: 'description',
+      },
+      {
+        type: 'input',
+        message: 'Installation instructions for your project:',
+        name: 'instructions',
+      },
+    //❌ I'll finish the prompts later
+    ])
+    .then((response) =>
+      //❌I imagine the responses will need to be sent to another function...
+    );
 
 
 const questions = [];
