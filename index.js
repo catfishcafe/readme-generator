@@ -1,10 +1,11 @@
 //❌ If a line has '❌' it means 'delete this comment before final version'
 
 //❌ TODO: Include packages needed for this application
-//❌ Use the 'require' function
-//❌from assignment: 
-  //❌'Your task is to create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer packageLinks to an external site'
-//❌so "Inquirer" will be a package to use "require" on (also it's already in the dependencies in package.json so...yeah)
+//❌ Use the 'require' function for Inquirer
+//❌from 09.14:
+//❌const badmath = require('badmath');
+
+const inquirer = require('inquirer');
 
 //❌ TODO: Create an array of questions for user input
 //❌From assignment:
@@ -18,11 +19,62 @@
   // THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
   // WHEN I enter my email address
   // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
+//❌from 09.19:
+  // inquirer
+  //   .prompt([
+  //     {
+  //       type: 'input',
+  //       message: 'What is your user name?',
+  //       name: 'username',
+  //     },
+  //     {
+  //       type: 'password',
+  //       message: 'What is your password?',
+  //       name: 'password',
+  //     },
+  //     {
+  //       type: 'password',
+  //       message: 'Re-enter password to confirm:',
+  //       name: 'confirm',
+  //     },
+  //   ])
+  //   .then((response) =>
+  //     response.confirm === response.password
+  //       ? console.log('Success!')
+  //       : console.log('You forgot your password already?!')
+  //   );
+
 //❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email' ...not sure about that last part about the instructiosn on 'how to reach me', is that a separate prompt?
+
+  inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: 'What is your user name?',
+      name: 'username',
+    },
+    {
+      type: 'password',
+      message: 'What is your password?',
+      name: 'password',
+    },
+    {
+      type: 'password',
+      message: 'Re-enter password to confirm:',
+      name: 'confirm',
+    },
+  ])
+  .then((response) =>
+    response.confirm === response.password
+      ? console.log('Success!')
+      : console.log('You forgot your password already?!')
+  );
+
 
 const questions = [];
 
 //❌ TODO: Create a function to write README file
+//❌I have a sneaking suspicion this will involve the generateMarkdown.js
 function writeToFile(fileName, data) {}
 
 //❌ TODO: Create a function to initialize app
