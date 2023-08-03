@@ -52,6 +52,10 @@ const inquirer = require('inquirer');
 
 //❌ TODO: Create a function to write README file
 //❌I have a sneaking suspicion this will involve the generateMarkdown.js
+//❌oooooooooh so THAT'S what fs is, I'd forgotten. ok so I need to use fs...
+//❌specifically I will need to import fs like in 09.13.
+const fs = require('fs');
+
 function writeToFile(fileName, data) {}
 
 //❌ TODO: Create a function to initialize app
