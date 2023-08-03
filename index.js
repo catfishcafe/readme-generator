@@ -1,11 +1,9 @@
 //❌ If a line has '❌' it means 'delete this comment before final version'
 
 //❌ TODO: Include packages needed for this application
-//❌ Use the 'require' function for Inquirer
-//❌from 09.14:
-//❌const badmath = require('badmath');
 
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 //❌ TODO: Create an array of questions for user input
 //❌From assignment:
@@ -22,50 +20,42 @@ const inquirer = require('inquirer');
 
 //❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email' ...not sure about that last part about the instructiosn on 'how to reach me', is that a separate prompt?
 
-  inquirer
-    .prompt([
-      {
-        type: 'input',
-        message: 'Project title:',
-        name: 'title',
-      },
-      {
-        type: 'input',
-        message: 'Project description:',
-        name: 'description',
-      },
-      {
-        type: 'input',
-        message: 'Installation instructions for your project:',
-        name: 'instructions',
-      },
-    //❌ I'll finish the prompts later
-    ])
-    .then((response) =>
-      //❌I imagine the responses will need to be sent to another function...
-      console.log('nothing here yet')
-    );
-
+//❌ whatever I had before wasn't working for some reason, so here's something copied from one of the acitivities that I know works, let's see if it works here...
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: 'Project title:',
+      name: 'title',
+    },
+    {
+      type: 'input',
+      message: 'Project description:',
+      name: 'description',
+    },
+  ])
+  .then((response) =>
+    console.log(response)
+  );
 
 // const questions = [];
-//❌do I need this? does the "inquire" thing need to be a const?
+//❌do I need this? I don't exactly how this relates to the above...
 
 //❌ TODO: Create a function to write README file
 //❌I have a sneaking suspicion this will involve the generateMarkdown.js
-//❌oooooooooh so THAT'S what fs is, I'd forgotten. ok so I need to use fs...
-//❌specifically I will need to import fs like in 09.13.
-const fs = require('fs');
-
 
 //❌like in 09.13, creating a README markdown file
-fs.writeFile('README.md', process.argv[2], (err) =>
-  err ? console.error(err) : console.log('Success!')
-);
+//❌ commented out ftm
+// fs.writeFile('README.md', process.argv[2], (err) =>
+//   err ? console.error(err) : console.log('Success!')
+// );
 
 // function writeToFile(fileName, data) {}
 
 //❌ TODO: Create a function to initialize app
-function init() {}
+//❌ commented out ftm
+//function init() {}
 
 // Function call to initialize app
-init();
+//❌ commented out ftm
+//init();
