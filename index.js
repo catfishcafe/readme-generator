@@ -43,10 +43,12 @@ const inquirer = require('inquirer');
     ])
     .then((response) =>
       //❌I imagine the responses will need to be sent to another function...
+      console.log('nothing here yet')
     );
 
 
-const questions = [];
+// const questions = [];
+//❌do I need this? does the "inquire" thing need to be a const?
 
 //❌ TODO: Create a function to write README file
 //❌I have a sneaking suspicion this will involve the generateMarkdown.js
