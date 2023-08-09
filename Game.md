@@ -6,13 +6,13 @@
   ## Usage
   Play game
   ## Contributing
-  github below
+  Visit Github below
   ## Testing
   Test game
   ## License
   (I'll get to this later)
   ## Questions
-  Please contact the project with the information below:
-  Github: gamemaker 
-  Email: gamemaker email
+  <p>Please contact the project owner with the information below:</p>
+  Github: gamemaker <br>
+  Email: gamemaker at examplemail
   

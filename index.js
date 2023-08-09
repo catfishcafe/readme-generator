@@ -18,7 +18,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
   // WHEN I enter my email address
   // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
-//❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email' ...not sure about that last part about the instructiosn on 'how to reach me', is that a separate prompt?
+//❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email'
 
 inquirer
   .prompt([

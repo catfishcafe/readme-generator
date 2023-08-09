@@ -26,8 +26,8 @@ function generateMarkdown(data) {
   ## License
   (I'll get to this later)
   ## Questions
-  Please contact the project owner with the information below:
-  Github: ${data.github} 
+  <p>Please contact the project owner with the information below:</p>
+  Github: ${data.github} <br>
   Email: ${data.email}
   `;
 }
