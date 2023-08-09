@@ -20,7 +20,6 @@ const fs = require('fs');
 
 //❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email' ...not sure about that last part about the instructiosn on 'how to reach me', is that a separate prompt?
 
-//❌ whatever I had before wasn't working for some reason, so here's something copied from one of the acitivities that I know works, let's see if it works here...
 inquirer
   .prompt([
     {
@@ -35,22 +34,34 @@ inquirer
     },
   ])
   .then((response) =>
-    console.log(response)
+  //I think writeToFile will be called here?
+    // writeToFile(response.title, response.description),
+    // console.log(response)
+    testFunction(response)
   );
 
 // const questions = [];
-//❌do I need this? I don't exactly how this relates to the above...
+//❌do I need this 'const questions'? I don't exactly how this relates to the above...
 
 //❌ TODO: Create a function to write README file
 //❌I have a sneaking suspicion this will involve the generateMarkdown.js
 
 //❌like in 09.13, creating a README markdown file
 //❌ commented out ftm
-// fs.writeFile('README.md', process.argv[2], (err) =>
-//   err ? console.error(err) : console.log('Success!')
-// );
 
-// function writeToFile(fileName, data) {}
+//need to pass it data from inquirer...I don't know if it's passed to both things at the same time or first to inquirer and then to writeToFile
+
+function testFunction(response){
+  const data = `${response.description}`;
+  console.log(data);
+  fs.writeFileSync(`${response.title}.md`, data)
+}
+
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName + '.md', process.argv[2], (err) =>
+//     err ? console.error(err) : console.log('Success!')
+//   );
+// }
 
 //❌ TODO: Create a function to initialize app
 //❌ commented out ftm
