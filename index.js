@@ -1,11 +1,9 @@
 //❌ If a line has '❌' it means 'delete this comment before final version'
 
 //❌ TODO: Include packages needed for this application
-//❌ Use the 'require' function for Inquirer
-//❌from 09.14:
-//❌const badmath = require('badmath');
 
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 //❌ TODO: Create an array of questions for user input
 //❌From assignment:
@@ -22,40 +20,53 @@ const inquirer = require('inquirer');
 
 //❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email' ...not sure about that last part about the instructiosn on 'how to reach me', is that a separate prompt?
 
-  inquirer
-    .prompt([
-      {
-        type: 'input',
-        message: 'Project title:',
-        name: 'title',
-      },
-      {
-        type: 'input',
-        message: 'Project description:',
-        name: 'description',
-      },
-      {
-        type: 'input',
-        message: 'Installation instructions for your project:',
-        name: 'instructions',
-      },
-    //❌ I'll finish the prompts later
-    ])
-    .then((response) =>
-      //❌I imagine the responses will need to be sent to another function...
-      console.log('nothing here yet')
-    );
-
+inquirer
+  .prompt([
+    {
+      type: 'input',
+      message: 'Project title:',
+      name: 'title',
+    },
+    {
+      type: 'input',
+      message: 'Project description:',
+      name: 'description',
+    },
+  ])
+  .then((response) =>
+  //I think writeToFile will be called here?
+    // writeToFile(response.title, response.description),
+    // console.log(response)
+    testFunction(response)
+  );
 
 // const questions = [];
-//❌do I need this? does the "inquire" thing need to be a const?
+//❌do I need this 'const questions'? I don't exactly how this relates to the above...
 
 //❌ TODO: Create a function to write README file
 //❌I have a sneaking suspicion this will involve the generateMarkdown.js
-function writeToFile(fileName, data) {}
+
+//❌like in 09.13, creating a README markdown file
+//❌ commented out ftm
+
+//need to pass it data from inquirer...I don't know if it's passed to both things at the same time or first to inquirer and then to writeToFile
+
+function testFunction(response){
+  const data = `${response.description}`;
+  console.log(data);
+  fs.writeFileSync(`${response.title}.md`, data)
+}
+
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName + '.md', process.argv[2], (err) =>
+//     err ? console.error(err) : console.log('Success!')
+//   );
+// }
 
 //❌ TODO: Create a function to initialize app
-function init() {}
+//❌ commented out ftm
+//function init() {}
 
 // Function call to initialize app
-init();
+//❌ commented out ftm
+//init();
