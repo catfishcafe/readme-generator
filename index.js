@@ -1,7 +1,6 @@
-//❌ If a line has '❌' it means 'delete this comment before final version'
+//❌ If a line (or section) has '❌' it means 'delete this comment before final version'
 
-//❌ TODO: Include packages needed for this application
-
+//Necessary packages and paths
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
@@ -53,6 +52,16 @@ inquirer
       message: 'Test instructions:',
       name: 'testing',
     },
+    {
+      type: 'input',
+      message: 'Project owner Github:',
+      name: 'github',
+    },
+    {
+      type: 'input',
+      message: 'Project owner email:',
+      name: 'email',
+    },
   ])
   .then((response) =>
   //I think writeToFile will be called here?
@@ -62,15 +71,9 @@ inquirer
   );
 
 // const questions = [];
-//❌do I need this 'const questions'? I don't exactly how this relates to the above...
+//❌I'm pretty sure I don't need this, but it was part of the starter code so I'm hanging onto it for a bit
 
 //❌ TODO: Create a function to write README file
-//❌I have a sneaking suspicion this will involve the generateMarkdown.js
-
-//❌like in 09.13, creating a README markdown file
-//❌ commented out ftm
-
-//need to pass it data from inquirer...I don't know if it's passed to both things at the same time or first to inquirer and then to writeToFile
 
 function writeToFile(data){
   console.log(data);
