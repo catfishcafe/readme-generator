@@ -14,7 +14,9 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
   return `
   # ${data.title}
-  ##This is the song that never ends, yes it goes on and on...
+  ${data.description}
+  ## Installation
+  ${data.installation}
   `;
 }
 

@@ -33,6 +33,26 @@ inquirer
       message: 'Project description:',
       name: 'description',
     },
+    {
+      type: 'input',
+      message: 'Installation instructions:',
+      name: 'installation',
+    },
+    {
+      type: 'input',
+      message: 'Usage:',
+      name: 'usage',
+    },
+    {
+      type: 'input',
+      message: 'Contribution guidelines:',
+      name: 'contribution',
+    },
+    {
+      type: 'input',
+      message: 'Test instructions:',
+      name: 'testing',
+    },
   ])
   .then((response) =>
   //I think writeToFile will be called here?
@@ -52,10 +72,9 @@ inquirer
 
 //need to pass it data from inquirer...I don't know if it's passed to both things at the same time or first to inquirer and then to writeToFile
 
-function writeToFile(response){
-  const data = `${response.description}`;
+function writeToFile(data){
   console.log(data);
-  fs.writeFileSync(`${response.title}.md`, generateMarkdown(data))
+  fs.writeFileSync(`${data.title}.md`, generateMarkdown(data))
 }
 
 // function writeToFile2(fileName, data) {
