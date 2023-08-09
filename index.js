@@ -38,7 +38,7 @@ inquirer
   //I think writeToFile will be called here?
     // writeToFile(response.title, response.description),
     // console.log(response)
-    testFunction(response)
+    writeToFile(response)
   );
 
 // const questions = [];
@@ -52,13 +52,13 @@ inquirer
 
 //need to pass it data from inquirer...I don't know if it's passed to both things at the same time or first to inquirer and then to writeToFile
 
-function testFunction(response){
+function writeToFile(response){
   const data = `${response.description}`;
   console.log(data);
-  fs.writeFileSync(`${response.title}.md`, data)
+  fs.writeFileSync(`${response.title}.md`, generateMarkdown(data))
 }
 
-// function writeToFile(fileName, data) {
+// function writeToFile2(fileName, data) {
 //     fs.writeFile(fileName + '.md', process.argv[2], (err) =>
 //     err ? console.error(err) : console.log('Success!')
 //   );
