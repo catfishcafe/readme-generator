@@ -1,19 +1,19 @@
 
-  # Game
+  # title
   ## Description
-  Fun game
+  desc
   ## Installation
-  Install game
+  inst
   ## Usage
-  Play game
+  use
   ## Contributing
-  See Github below
+  contr
   ## Tests
-  Test game
+  test
   ## License
-  (I'll get to this later)
+  
   ## Questions
   <p>Please contact the project owner with the information below:</p>
-  Github: sure <br>
-  Email: why not
+  Github: git <br>
+  Email: email
   
