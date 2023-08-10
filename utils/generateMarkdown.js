@@ -17,7 +17,7 @@ function renderLicenseLink(license) {
     console.log('no license link')
     return ""
   } else {
-    return '(https://opensource.org/licenses/' + license + ')'
+    return 'https://opensource.org/licenses/' + license
   }
 }
 
@@ -28,14 +28,13 @@ function renderLicenseSection(license) {
     console.log('no license section')
     return ""
   } else {
-    console.log(license)
+    return 'License'
   }
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   renderLicenseLink(data.license)
-  renderLicenseSection(data.license)
   return `
   # ${data.title}
   ## Description
@@ -48,7 +47,7 @@ function generateMarkdown(data) {
   ${data.contribution}
   ## Tests
   ${data.testing}
-  ## License
+  ## ${renderLicenseSection(data.license)}
   [${renderLicenseBadge(data.license)}](${renderLicenseLink(data.license)})
   ## Questions
   <p>Please contact the project owner with the information below:</p>
