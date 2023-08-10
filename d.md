@@ -1,19 +1,19 @@
 
-  # title
+  # d
   ## Description
-  sure
+  d
   ## Installation
-  why
+  d
   ## Usage
-  why not
+  d
   ## Contributing
-  ok
+  d
   ## Tests
-  fine
+  d
   ## License
-  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]((https://opensource.org/licenses/MIT))
   ## Questions
   <p>Please contact the project owner with the information below:</p>
-  Github: almost done <br>
-  Email: done
+  Github: d <br>
+  Email: d
   
