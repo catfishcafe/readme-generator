@@ -31,17 +31,16 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
+  ## ${renderLicenseSection(data.license)}
+  [${renderLicenseBadge(data.license)}]${renderLicenseLink(data.license)}
   ## Table of Contents
-  - [${renderLicenseSection(data.license)}](#${renderLicenseSection(data.license)})  
   - [Description](#description)  
   - [Installation](#installation)  
   - [Usage](#usage)  
   - [Contributing](#contributing)  
   - [Tests](#tests)  
   - [Questions](#questions)  
-  ## ${renderLicenseSection(data.license)}
-  [${renderLicenseBadge(data.license)}]${renderLicenseLink(data.license)}
-  ## Description
+## Description
   ${data.description}
   ## Installation
   ${data.installation}
