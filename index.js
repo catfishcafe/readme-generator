@@ -18,8 +18,7 @@ const generateMarkdown = require('./utils/generateMarkdown')
   // WHEN I enter my email address
   // THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
 
-//❌...so the prompts are 'title', 'description', 'installation instructions', 'usage information', 'contribution guidelines', 'test instructions', 'license', 'GitHub username', 'email'
-
+//Inquirer questions for users to answer
 inquirer
   .prompt([
     {
@@ -64,27 +63,13 @@ inquirer
     },
   ])
   .then((response) =>
-  //I think writeToFile will be called here?
-    // writeToFile(response.title, response.description),
-    // console.log(response)
     writeToFile(response)
   );
 
-// const questions = [];
-//❌I'm pretty sure I don't need this, but it was part of the starter code so I'm hanging onto it for a bit
-
-//❌ TODO: Create a function to write README file
-
+//Creates .md file, names it, and sends data to the function that generates the file content
 function writeToFile(data){
-  console.log(data);
-  fs.writeFileSync(`${data.title}.md`, generateMarkdown(data))
+  fs.writeFileSync(`${data.title}.md`, generateMarkdown(data), (err) => err ? console.error(err) : console.log('Success!'))
 }
-
-// function writeToFile2(fileName, data) {
-//     fs.writeFile(fileName + '.md', process.argv[2], (err) =>
-//     err ? console.error(err) : console.log('Success!')
-//   );
-// }
 
 //❌ TODO: Create a function to initialize app
 //❌ commented out ftm
