@@ -1,19 +1,43 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  if (license === 'none') {
+    return ""
+  } else {
+    return '![License: ' + license + '](https://img.shields.io/badge/License-' + license + '-yellow.svg)'
+  }
+}
+//❌I don't see a GPL badge so I'll test this with MIT and pick a different third option :/
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'none') {
+    console.log('no license link')
+    return ""
+  } else {
+    return '(https://opensource.org/licenses/' + license + ')<br> This application is covered under the above license'
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (license === 'none') {
+    console.log('no license section')
+    return ""
+  } else {
+    return 'License'
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
+  ## ${renderLicenseSection(data.license)}
+  [${renderLicenseBadge(data.license)}]${renderLicenseLink(data.license)}
+  ## Description
   ${data.description}
   ## Installation
   ${data.installation}
@@ -21,13 +45,11 @@ function generateMarkdown(data) {
   ${data.usage}
   ## Contributing
   ${data.contribution}
-  ## Testing
+  ## Tests
   ${data.testing}
-  ## License
-  (I'll get to this later)
   ## Questions
-  <p>Please contact the project owner with the information below:</p>
-  Github: ${data.github} <br>
+  Please contact the project owner with the information below:  
+  Github: [${data.github}](https://github.com/${data.github})  
   Email: ${data.email}
   `;
 }
