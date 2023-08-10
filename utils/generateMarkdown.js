@@ -2,7 +2,6 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license === 'none') {
-    console.log('no badge')
     return ""
   } else {
     return '![License: ' + license + '](https://img.shields.io/badge/License-' + license + '-yellow.svg)'
@@ -17,7 +16,7 @@ function renderLicenseLink(license) {
     console.log('no license link')
     return ""
   } else {
-    return 'https://opensource.org/licenses/' + license
+    return '(https://opensource.org/licenses/' + license + ')<br> This application is covered under the above license'
   }
 }
 
@@ -37,7 +36,7 @@ function generateMarkdown(data) {
   return `
   # ${data.title}
   ## ${renderLicenseSection(data.license)}
-  [${renderLicenseBadge(data.license)}](${renderLicenseLink(data.license)})
+  [${renderLicenseBadge(data.license)}]${renderLicenseLink(data.license)}
   ## Description
   ${data.description}
   ## Installation
@@ -49,8 +48,8 @@ function generateMarkdown(data) {
   ## Tests
   ${data.testing}
   ## Questions
-  <p>Please contact the project owner with the information below:</p>
-  Github: ${data.github} <br>
+  Please contact the project owner with the information below:  
+  Github: [${data.github}](https://github.com/${data.github})  
   Email: ${data.email}
   `;
 }
