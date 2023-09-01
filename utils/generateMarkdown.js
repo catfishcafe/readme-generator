@@ -10,7 +10,6 @@ function renderLicenseBadge(license) {
 //Function that returns the license link; if there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'none') {
-    console.log('no license link')
     return ""
   } else {
     return '(https://opensource.org/licenses/' + license + ')<br> This application is covered under the above license'
@@ -20,7 +19,6 @@ function renderLicenseLink(license) {
 //Function that returns the license section of README; if there is no license, returns an empty string
 function renderLicenseSection(license) {
   if (license === 'none') {
-    console.log('no license section')
     return ""
   } else {
     return 'License'
