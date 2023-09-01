@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+//Function that returns a license badge based on which license is passed in; if there is no license, returns an empty string
 function renderLicenseBadge(license) {
   if (license === 'none') {
     return ""
@@ -7,37 +6,39 @@ function renderLicenseBadge(license) {
     return '![License: ' + license + '](https://img.shields.io/badge/License-' + license + '-yellow.svg)'
   }
 }
-//❌I don't see a GPL badge so I'll test this with MIT and pick a different third option :/
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+//Function that returns the license link; if there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'none') {
-    console.log('no license link')
     return ""
   } else {
     return '(https://opensource.org/licenses/' + license + ')<br> This application is covered under the above license'
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+//Function that returns the license section of README; if there is no license, returns an empty string
 function renderLicenseSection(license) {
   if (license === 'none') {
-    console.log('no license section')
     return ""
   } else {
     return 'License'
   }
 }
 
-// TODO: Create a function to generate markdown for README
+//Function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
   ## ${renderLicenseSection(data.license)}
   [${renderLicenseBadge(data.license)}]${renderLicenseLink(data.license)}
-  ## Description
+  ## Table of Contents
+  - [Description](#description)  
+  - [Installation](#installation)  
+  - [Usage](#usage)  
+  - [Contributing](#contributing)  
+  - [Tests](#tests)  
+  - [Questions](#questions)  
+## Description
   ${data.description}
   ## Installation
   ${data.installation}

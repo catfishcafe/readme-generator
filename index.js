@@ -59,7 +59,7 @@ function writeToFile(data){
     const fileName = `${data.title}.md`;
     const markdownText = generateMarkdown(data);
     fs.writeFileSync(fileName, markdownText);
-    console.log('Success!');
+    console.log('File successfully written');
   } catch (err) {
     console.log(err);
   }
