@@ -3,17 +3,17 @@
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br> This application is covered under the above license
   ## Description
-  Fun game
+  A fun game
   ## Installation
-  Install game
+  Run game installation file
   ## Usage
-  Play game
+  Play game to have fun
   ## Contributing
-  Contribute
+  Go to game website in developer mode
   ## Tests
-  Test
+  Test game
   ## Questions
   Please contact the project owner with the information below:  
   Github: [catfishcafe](https://github.com/catfishcafe)  
-  Email: an email
+  Email: catfishcafe@example.com
   
